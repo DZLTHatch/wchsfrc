@@ -57,7 +57,7 @@ const officersArray = [
     '1000006859.jpg'],
     ['madisons', 'Madison Silva', 'Manufacturing Lead',
     'I design and build any game specific pieces that our team needs for testing. I also assist with the construction of the robot.',
-    '1000006859.jpg']
+    'madison picture.jpeg']
 ];
 
 
