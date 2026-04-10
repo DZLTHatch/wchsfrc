@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>West Campus FRC</title>
+  <!-- Optional: Archscale-style fonts -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
   <script src="https://kit.fontawesome.com/eb28b34f1e.js" crossorigin="anonymous"></script>
@@ -14,7 +15,7 @@
     <!-- ============ NAVBAR ============ -->
     <header class="navbar">
   <div class="nav-logo">
-    <img src="images/West Campus FRC Logo.png" class="logo-mark" /> 
+    <div class="logo-mark">FRC</div>
     <div class="logo-text">
       <span>West Campus</span>
       <span>Robotics Team 11274</span>
@@ -32,10 +33,19 @@
       <a href="#projects">Projects</a>
       <a href="#officers">Officers</a>
       <a href="#support">Support</a>
-      <a href="sponsor/sponsors.html">Sponsors</a>
+      <a href="sponsors.html">Sponsors</a>
       <a href="#contact">Contact</a>
     </nav>
 
+    <!-- theme toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light / dark mode">
+      <span class="theme-icon theme-icon-sun">
+        <i class="fa-solid fa-sun"></i>
+      </span>
+      <span class="theme-icon theme-icon-moon">
+        <i class="fa-solid fa-moon"></i>
+      </span>
+    </button>
   </div>
 </header>
 
@@ -46,7 +56,7 @@
         <div class="hero-left">
           <p class="eyebrow">FIRST Robotics Competition · Team 11274</p>
           <h1 class="hero-title">Engineering the next generation of problem solvers.</h1>
-           <p class="hero-subtitle">
+          <p class="hero-subtitle">
             West Campus FRC combines mechanical design, software, and teamwork to build robots that compete, 
             and students who lead.
           </p>

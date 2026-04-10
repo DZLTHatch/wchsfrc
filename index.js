@@ -61,9 +61,26 @@ const officersArray = [
 ];
 
 
-// ========== THEME (DARK ONLY) ==========
-// Force dark mode at all times and remove light-mode switching.
-document.body.classList.add('theme-dark');
+// ========== THEME TOGGLE (LIGHT / DARK) ==========
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+// check saved preference or system preference
+const savedTheme = localStorage.getItem('wc-theme');
+const prefersDark =
+  window.matchMedia &&
+  window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+  document.body.classList.add('theme-dark');
+}
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('theme-dark');
+    const mode = document.body.classList.contains('theme-dark') ? 'dark' : 'light';
+    localStorage.setItem('wc-theme', mode);
+  });
+}
 
 // Turn into a lookup map for quick access
 const officerMap = {};
